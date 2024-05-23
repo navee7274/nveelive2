@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="You are warmly welcome to the portfolio of Naveen Viraj. Here you can find the amazing outcomes of my creative endeavors and the impressive accomplishments of my learning journey. This is the place where I exhibit my best work for your satisfaction and delight. Please feel free to browse through my projects and share your honest feedback with me. If you are impressed by my style and skills, let's get in touch and work together on something awesome."
+    />
+    <meta name="author" content="Naveen Viraj" />
+    <meta name="keywords" content="Naveen Viraj, Naveen, NV Live, Naveen Viraj Portfolio" />
+    <link rel="canonical" href="https://www.naveenviraj.com/portfolio.html" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="style_portfolio.css" rel="stylesheet" />
+
+    <title>Portfolio | Naveen Viraj</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_wrap">
+        <a class="logo" href="/">
+          <img class="logo_image" src="/images/logo_white.png" alt="logo" />
+        </a>
+        <nav class="main_nav">
+          <ul class="nav_links">
+            <li><a href="/">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="menu_button"><img src="/images/menu_icon.svg" alt="menu_icon" /></div>
+      </div>
+      <div class="dropdown_menu">
+        <ul class="nav_links">
+          <li><a href="/">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </header>
+    <article>
+      <div class="previewer_container">
+        <img class="preview" src="" alt="Previewer" />
+      </div>
+      <h1>My Portfolio</h1>
+      <section id="web">
+        <h2>Websites</h2>
+        <div class="work">
+          <div class="works web">
+            <a href="https://www.rmulive.com/"><img src="/images/page_portfolio/web_02.png" alt="RMULIVE" /></a>
+          </div>
+        </div>
+      </section>
+      <section id="3d">
+        <h2>3D Work</h2>
+        <div class="work">
+          <div class="works wimage">
+            <img src="/images/page_portfolio/navee_speaker_3d.jpeg" alt="" />
+          </div>
+          <div class="works wimage">
+            <img src="/images/page_portfolio/navee_scifi_blender_3d.jpg" alt="" />
+          </div>
+          <div class="works wimage">
+            <img src="/images/page_portfolio/navee_table_blender_3d.jpg" alt="" />
+          </div>
+          <div class="works wimage">
+            <img src="/images/page_portfolio/navee_pendrive_3d.jpg" alt="" />
+          </div>
+          <div class="works wimage">
+            <img src="/images/page_portfolio/navee_wrench_3d.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="graphic">
+        <h2>Graphic Designs</h2>
+        <div class="work">
+          <div class="works w2image">
+            <img src="/images/page_portfolio/navee_graphic_4.jpeg" alt="" />
+          </div>
+          <div class="works w2image">
+            <img src="/images/page_portfolio/navee_graphic_3.jpeg" alt="" />
+          </div>
+          <div class="works w2image">
+            <img src="/images/page_portfolio/navee_graphic_1.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+    </article>
+    <script>
+      const prevContainer = document.querySelector(".previewer_container");
+      const prevActual = document.querySelector(".preview");
+      const wImage = document.querySelectorAll(".wimage img");
+
+      function closePreview() {
+        prevContainer.classList.remove("active");
+        prevActual.src = "";
+      }
+
+      for (let i = 0; i < wImage.length; i++) {
+        wImage[i].addEventListener("click", function () {
+          prevActual.src = wImage[i].getAttribute("src");
+          prevContainer.classList.add("active");
+        });
+      }
+
+      prevActual.addEventListener("click", function () {
+        prevContainer.classList.remove("active");
+        prevActual.src = "";
+      });
+      prevContainer.addEventListener("click", function () {
+        prevContainer.classList.remove("active");
+        prevActual.src = "";
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

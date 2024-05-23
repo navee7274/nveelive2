@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /portfolio/
+
+Sitemap: https://www.naveenviraj.com/sitemap.xml
